@@ -1,3 +1,4 @@
+#여기에 있는 파일들은 백업안해.
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -110,6 +111,8 @@ ENV/
 env.bak/
 venv.bak/
 
+#가상환경들은 자동으로 백업안해
+
 # Spyder project settings
 .spyderproject
 .spyproject
@@ -127,3 +130,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#Pycharm
+.idea/
+
