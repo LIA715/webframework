@@ -9,9 +9,10 @@
         <a href="/">HOME</a>
     </nav>
     <h2> Post List </h2>
-    {% for p in posts %}
+    {% for p in posts %} <!--문법적인 구문들 사용 가능. posts로 넘어와. = 여러개 -->
     <hr />
-    <h3><a href="{{p.get_absolute_url}}"> {{ p.title }} </a></h3> <!--필드를 그대로 가져와. 필드 먼저 찾고 없으면 함수를 찾음. 그래도 없으면 에러처리-->
+    <h3><a href="{{p.get_absolute_url}}"> {{ p.title }} </a></h3>
+    <!-- ㄴ>필드를 그대로 가져와. 필드 먼저 찾고 없으면 함수를 찾음. 그래도 없으면 에러처리. 모델 안에 있는 함수-->
     <!--<h3><a href="{{p.pk}}"> {{ p.title }} </a></h3>  편한 방식.-->
     <p>{{p.created_at}}</p>
     <p>{{p.content}}</p>
