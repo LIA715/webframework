@@ -10,8 +10,13 @@
     </nav>
     <h2> Post List </h2>
     {% for p in posts %}
-    <h3>{{ posts }} </h3>
-    <% endfor %>
+    <hr />
+    <h3><a href="{{p.get_absolute_url}}"> {{ p.title }} </a></h3> <!--필드를 그대로 가져와. 필드 먼저 찾고 없으면 함수를 찾음. 그래도 없으면 에러처리-->
+    <!--<h3><a href="{{p.pk}}"> {{ p.title }} </a></h3>  편한 방식.-->
+    <p>{{p.created_at}}</p>
+    <p>{{p.content}}</p>
+
+    {% endfor %}
 
 </body>
 </html>

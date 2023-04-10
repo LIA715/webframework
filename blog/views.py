@@ -9,7 +9,7 @@ from .models import Post
 
 # Create your views here.
 def index(request):
-    posts=Post.objectss.all()
+    posts=Post.objects.all()
 
     return render(
         request,
@@ -20,7 +20,11 @@ def index(request):
     )
 
 def single_post_page(request,pk):
+    post = Post.objects.get(pk=pk)
     return render(
         request,
         'blog/single_post_page.html',
+        {
+            'post':post, #앞에가 변수명 뒤에가 객체
+        }
     )
