@@ -9,6 +9,9 @@
 
 </head>
 <body>
+{% extends 'blog/base.html' %}
+
+{% block main_area %}
     <nav>
         <a href="/">HOME</a>
     </nav>
@@ -24,6 +27,7 @@
     <p>{{p.content}}</p>
 
     {% endfor %}
+{% endblock %}
 <!---->
 </body>
 </html>

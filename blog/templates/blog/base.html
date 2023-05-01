@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Blog </title>
+
+</head>
+<body>
+
+{% block add %}
+{% endblock %}
+<!--모듈화 시킨걸 안에 비워두는 것. 빈영역으로 만들어. 공통적으로 만든 것을 한 곳에서 작업해서 공통 적용할 수 있고 싫으면 이 방법으로 해당 페이지만 제외.-->
+    <nav>
+        <a href="/">HOME</a>
+    </nav>
+    <h2> Post List </h2>
+
+    <div class="col col-3">
+    <a class="btn btn-outline-primary btn-block" href="#" role="button">Midterm Home</a>
+    <a class="btn btn-outline-info btn-block" href="#" role="button">Staff List</a>
+    {% block add %}
+    <a class="btn btn-outline-info btn-block" href="#" role="button">Staff List</a>
+    {% endblock %}
+    </div>
+
+    <div class="col col-9">
+        {% block main_area %}
+        {% endblock %}
+    </div>
+</body>
+</html>
